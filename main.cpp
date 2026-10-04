@@ -37,7 +37,7 @@ int main() {
 
         if (choice == 1) { 
 
-            int damage = rand() 16 + 10;  
+            int damage = rand() % 16 + 10;  
             enemyHealth = enemyHealth - damage; 
 
             cout << playerName << " attacks the enemy for " << damage << " damage!" << endl; 
