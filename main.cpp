@@ -9,21 +9,22 @@ int main() {
 
     srand(time(0)); 
 
+    string replay = "yes";
     string playerName; 
+    
+    cout << "Enter your name: "; 
+    getline(cin, playerName); 
+
+    while (replay == "yes") { 
+    
     int playerHealth = 100; 
     int enemyHealth = 100; 
     int choice; 
     int healsLeft = 3; 
 
-
-    cout << "Enter your name: "; 
-    getline(cin, playerName); 
-
-
     cout << "\nWelcome, " << playerName<< "!" << endl; 
     cout << "Your health: " << playerHealth << endl; 
     cout << "Enemy health: " << enemyHealth << endl; 
-
 
     while (playerHealth > 0 && enemyHealth > 0) { 
 
@@ -94,6 +95,11 @@ int main() {
     else { 
         cout << "\nYou defeated the enemy!" << endl; 
     }
+
+    cout << "\nPlay again? (yes/no): ";
+    cin >> replay;
+    }
+    cout << "\nThanks for playing!" << endl;
 
     return 0; 
 }
