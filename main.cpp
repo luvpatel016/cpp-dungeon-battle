@@ -129,6 +129,7 @@ int main() {
 
     else { 
         cout << "\nYou defeated the enemy!" << endl; 
+        cout << "HOORAY!!" << endl;
     }
 
     cout << "\nPlay again? (yes/no): ";
