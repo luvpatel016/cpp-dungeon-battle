@@ -15,7 +15,7 @@ int main() {
     cout << "Enter your name: "; 
     getline(cin, playerName); 
 
-    while (replay == "yes") { 
+    while (replay == "yes" || replay == "Yes" || replay == "YES") { 
     
     int playerHealth = 100; 
     int enemyHealth = 100; 
@@ -36,6 +36,8 @@ int main() {
         cin >> choice; 
 
         int enemyDamage = rand() % 11 + 10; 
+
+        bool validChoice = true;
 
         if (choice == 1) { 
 
@@ -75,16 +77,15 @@ int main() {
         }
 
         else { 
-
             cout << "Invalid Choice!" << endl;
+            validChoice = false;
         }
 
-        if (enemyHealth > 0) { 
-
+        if (enemyHealth > 0 && validChoice) { 
             playerHealth = playerHealth - enemyDamage; 
 
             cout << "\nThe enemy attacks " << playerName << " for " << enemyDamage << " damage!" << endl;
-            cout << "\nYour health: " << playerHealth << endl; 
+            cout << "Your health: " << playerHealth << endl; 
         }
     }
 
