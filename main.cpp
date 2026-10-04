@@ -21,6 +21,16 @@ int main() {
     int enemyHealth = 100; 
     int choice; 
     int healsLeft = 3; 
+    
+    int difficulty; 
+
+    cout << "\nChoose difficulty: " << endl; 
+    cout << "1. Easy" << endl; 
+    cout << "2. Medium" << endl; 
+    cout << "3. Hard" << endl;
+
+    cout << "Choose a difficulty: "; 
+    cin >> difficulty; 
 
     cout << "\nWelcome, " << playerName<< "!" << endl; 
     cout << "Your health: " << playerHealth << endl; 
@@ -35,7 +45,17 @@ int main() {
         cout << "Choose an action: "; 
         cin >> choice; 
 
-        int enemyDamage = rand() % 11 + 10; 
+        int enemyDamage; 
+
+        if (difficulty == 1) { 
+            enemyDamage = rand() % 6 + 5; 
+        } 
+        else if (difficulty == 2) { 
+            enemyDamage = rand() % 11 + 10; 
+        }
+        else if (difficulty == 3) { 
+            enemyDamage = rand() % 11 + 15; 
+        }
 
         bool validChoice = true;
 
