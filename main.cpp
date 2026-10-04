@@ -32,6 +32,11 @@ int main() {
     cout << "Choose a difficulty: "; 
     cin >> difficulty; 
 
+    while(difficulty < 1 || difficulty > 3) { 
+        cout << "Invalid difficulty. Choose 1, 2, or 3: "; 
+        cin >> difficulty;  
+    }
+
     cout << "\nWelcome, " << playerName<< "!" << endl; 
     cout << "Your health: " << playerHealth << endl; 
     cout << "Enemy health: " << enemyHealth << endl; 
