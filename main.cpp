@@ -1,10 +1,13 @@
 #include <iostream> 
 #include <string> 
+#include <cstdlib>
+#include <ctime> 
 
 using namespace std; 
 
 int main() { 
 
+    srand(time(0)); 
 
     string playerName; 
     int playerHealth = 100; 
@@ -30,11 +33,11 @@ int main() {
         cout << "Choose an action: "; 
         cin >> choice; 
 
-        int enemyDamage = 15; 
+        int enemyDamage = rand() % 11 + 10; 
 
         if (choice == 1) { 
 
-            int damage = 20; 
+            int damage = rand() 16 + 10;  
             enemyHealth = enemyHealth - damage; 
 
             cout << playerName << " attacks the enemy for " << damage << " damage!" << endl; 
