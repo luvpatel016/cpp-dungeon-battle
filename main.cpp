@@ -31,16 +31,28 @@ int main() {
 
         cout << playerName << " attacks the enemy for " << damage << " damage!" << endl; 
 
-        cout << "Enemy health: " << enemyHealth << endl; 
-    } else if (choice == 2) {
+        cout << "Enemy health: " << enemyHealth << endl;  
+    } 
+    
+    else if (choice == 2) {
         cout << playername << " heals" << endl; 
-    } else if (choice == 3) { 
+    } 
+    
+    else if (choice == 3) { 
         cout << playerName << " defends!" << endl; 
-    } else { 
+    } 
+    
+    else { 
         cout << "Invalid Choice!" << endl; 
     }
 
+    int enemyDamage = 15; 
 
+    playerHealth = playerHealth - enemyDamage; 
 
+    cout << "\nThe enemy attacks " << playerName << " for " << enemyDamage << " damage!" << endl; 
+
+    cout << "Your health: " << playerHealth << endl; 
+    
     return 0;
 }
