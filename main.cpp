@@ -46,9 +46,12 @@ int main() {
 
             int healAmount = 20; 
             playerHealth = playerHealth + healAmount; 
+            
+            if (playerHealth > 100) { 
+                playerHealth = 100;
+            }
 
             cout << playerName << " heals for " << healAmount << " health!" << endl;
-
             cout << "Your health: " << playerHealth << endl; 
         }
 
