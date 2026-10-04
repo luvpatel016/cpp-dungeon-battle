@@ -25,7 +25,13 @@ int main() {
     cin >> choice; 
 
     if (choice == 1) { 
-        cout << playerName << " attacks the enemy!" << endl;
+        int damage = 20; 
+
+        enemyHealth = enemyHealth - damage; 
+
+        cout << playerName << " attacks the enemy for " << damage << " damage!" << endl; 
+
+        cout << "Enemy health: " << enemyHealth << endl; 
     } else if (choice == 2) {
         cout << playername << " heals" << endl; 
     } else if (choice == 3) { 
@@ -33,6 +39,8 @@ int main() {
     } else { 
         cout << "Invalid Choice!" << endl; 
     }
+
+
 
     return 0;
 }
