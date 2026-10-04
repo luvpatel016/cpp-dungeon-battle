@@ -44,7 +44,7 @@ int main() {
     while (playerHealth > 0 && enemyHealth > 0) { 
 
         cout << "\n1. Attack" << endl; 
-        cout << "2. Heal" << endl; 
+        cout << "2. Heal (MAX 3 HEALS PER ROUND)" << endl; 
         cout << "3. Defend" << endl; 
 
         cout << "Choose an action: "; 
