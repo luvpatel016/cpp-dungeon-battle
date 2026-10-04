@@ -13,6 +13,7 @@ int main() {
     int playerHealth = 100; 
     int enemyHealth = 100; 
     int choice; 
+    int healsLeft = 3; 
 
 
     cout << "Enter your name: "; 
@@ -46,6 +47,8 @@ int main() {
         }
 
         else if (choice == 2) { 
+        
+            if (healsLeft > 0) { 
 
             int healAmount = 20; 
             playerHealth = playerHealth + healAmount; 
@@ -54,9 +57,15 @@ int main() {
                 playerHealth = 100;
             }
 
+            healsLeft--;
+
             cout << "\n" << playerName << " heals for " << healAmount << " health!" << endl;
             cout << "Your health: " << playerHealth << endl; 
+
+        } else { 
+            cout << "You have no heals left! " << endl;
         }
+    }
 
         else if (choice == 3) { 
 
