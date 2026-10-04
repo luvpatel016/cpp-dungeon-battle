@@ -19,7 +19,7 @@ int main() {
     getline(cin, playerName); 
 
 
-    cout << "\nWelcome, " << playerName << "!" << endl; 
+    cout << "\nWelcome, " << playerName<< "!" << endl; 
     cout << "Your health: " << playerHealth << endl; 
     cout << "Enemy health: " << enemyHealth << endl; 
 
@@ -40,9 +40,9 @@ int main() {
             int damage = rand() % 16 + 10;  
             enemyHealth = enemyHealth - damage; 
 
-            cout << playerName << " attacks the enemy for " << damage << " damage!" << endl; 
+            cout << "\n" << playerName << " attacks the enemy for " << damage << " damage!" << endl; 
 
-            cout << "Enemy health: " << enemyHealth << endl; 
+            cout << "Enemy health: " << enemyHealth << endl;  
         }
 
         else if (choice == 2) { 
@@ -54,14 +54,14 @@ int main() {
                 playerHealth = 100;
             }
 
-            cout << playerName << " heals for " << healAmount << " health!" << endl;
+            cout << "\n" << playerName << " heals for " << healAmount << " health!" << endl;
             cout << "Your health: " << playerHealth << endl; 
         }
 
         else if (choice == 3) { 
 
             enemyDamage = 5; 
-            cout << playerName << " defends!" << endl; 
+            cout << "\n" << playerName << " defends!" << endl; 
         }
 
         else { 
@@ -73,7 +73,8 @@ int main() {
 
             playerHealth = playerHealth - enemyDamage; 
 
-            cout << "\nThe enemy attacks " << playerName << " for " << enemyDamage << " damage!" << endl; 
+            cout << "\nThe enemy attacks " << playerName << " for " << enemyDamage << " damage!" << endl;
+            cout << "\nYour health: " << playerHealth << endl; 
         }
     }
 
