@@ -75,7 +75,7 @@ int main() {
         cout << "\nYou lost the battle!" << endl; 
     }
 
-    else if { 
+    else { 
         cout << "\nYou defeated the enemy!" << endl; 
     }
 
