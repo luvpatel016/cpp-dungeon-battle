@@ -88,6 +88,7 @@ int main() {
             healsLeft--;
 
             cout << "\n" << playerName << " heals for " << healAmount << " health!" << endl;
+            cout << "Heals left: " << healsLeft << endl;
             cout << "Your health: " << playerHealth << endl; 
 
         } else { 
@@ -97,9 +98,17 @@ int main() {
 
         else if (choice == 3) { 
 
-            enemyDamage = 5; 
-            cout << "\n" << playerName << " defends!" << endl; 
+            if (difficulty == 1) { 
+                enemyDamage = 2;
+            }
+            else if (difficulty == 2) { 
+                enemyDamage = 5; 
+            }
+            else if (difficulty = 3) { 
+                enemyDamage = 8;
         }
+        cout << "\n" << playerName << " defends!" << endl;
+    }
 
         else { 
             cout << "Invalid Choice!" << endl;
