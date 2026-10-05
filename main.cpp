@@ -12,7 +12,7 @@ int main() {
     string replay = "yes";
     string playerName; 
     
-    cout << "Enter your name: "; 
+    cout << "\nEnter your name: "; 
     getline(cin, playerName); 
 
     while (replay == "yes" || replay == "Yes" || replay == "YES") { 
